@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: white;
+  padding: 20px;
+  border-bottom: 2px solid gray;
+}
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+p.subtext {
+  color: gray;
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+main {
+  padding: 20px;
+}
+.input-group {
+  margin: 10px 0;
+}
+.meme-canvas {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  background: #fff;
+  touch-action: none;
+}
+.meme-canvas img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.meme-text {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000;
+  cursor: move;
+  user-select: none;
+  touch-action: none;
+}
+.meme-text.selected {
+  outline: 2px dashed red;
+}
+.delete-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 10;
+}
+.template-grid {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+.template-grid img {
+  width: 100%;
+  cursor: pointer;
+}
