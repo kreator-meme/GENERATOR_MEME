@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(ノ• - •)ノGENERATOR MEME</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>(ノ• - •)ノGENERATOR MEME</h1>
+    <p class="subtext">Wersja tylko na komputer!</p>
+  </header>
+  <main>
+    <div class="input-group">
+      <input type="file" id="upload" accept="image/png, image/jpeg, image/gif">
+    </div>
+    <div class="input-group">
+      <input type="text" id="topText" placeholder="Górny tekst">
+      <button onclick="addText('top')">Dodaj tekst</button>
+    </div>
+    <div class="input-group">
+      <input type="text" id="bottomText" placeholder="Dolny tekst">
+      <button onclick="addText('bottom')">Dodaj tekst</button>
+    </div>
+    <div class="input-group">
+      <label>Rozmiar tekstu:</label>
+      <input type="range" id="textSize" min="10" max="60" value="30" oninput="updateTextSize()">
+    </div>
+    <div class="input-group">
+      <button onclick="refreshTemplates()">Odśwież szablony</button>
+    </div>
+    <div class="template-grid" id="templateGrid"></div>
+    <div class="meme-canvas" id="memeCanvas"></div>
+    <div class="input-group">
+      <button onclick="downloadMeme()">Pobierz mema</button>
+    </div>
+  </main>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

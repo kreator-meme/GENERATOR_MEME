@@ -146,18 +146,6 @@ function refreshTemplates() {
   });
 }
 
-function toggleTemplates() {
-  const grid = document.getElementById("templateGrid");
-  const btn = document.getElementById("toggleBtn");
-  if (grid.style.display === "none" || grid.style.display === "") {
-    grid.style.display = "grid";
-    btn.textContent = "Ukryj szablony";
-  } else {
-    grid.style.display = "none";
-    btn.textContent = "Pokaż szablony";
-  }
-}
-
 function loadImage(src) {
   memeCanvas.innerHTML = "";
   const img = new Image();
